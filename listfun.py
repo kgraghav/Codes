@@ -26,6 +26,12 @@ def listdot (a,b):
         c=c+a[x]*b[x]
     return c
 
+def listmean (a):
+    for x in range(0,len(a)):
+        c=c+a[x]*b[x]
+    c=c/len(a)
+    return c
+
 def listscal(a,b):
     if type(a)==list and (type(b)==int or type(b)==float):
         c=[b*x for x in a]
@@ -44,6 +50,6 @@ def doc():
          listelemwisemdiv (a,b): Returns list of elementwise division of lists "a" and "b" as a[...]/b[...]
          listsum (a):            Returns the sum of numbers in the list "a"
          listdot (a,b):          Returns the scalar or dot product of elements in lists "a" and "b"
-         listscal(a,b):          Returns a list of the product of scalar "a" with list "b" if "a" is scalar, or other way around. 
-                                 Atleast one input must be scalar and other a list
+         listmean (a):           Returns the arithmetic mean of the elements in list "a" 
+         listscal(a,b):          Returns a list of the product of scalar "a" with list "b" if "a" is scalar, or other way around.
          ''')
