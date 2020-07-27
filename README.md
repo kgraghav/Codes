@@ -5,4 +5,4 @@
 
 List of Files:
 1. Mycfd_burgers.cpp: C++ code to solve the inviscid Burgers Equation for fluid dynamics using the Bisection Method
-2. Python List Math Functions.ipynb: Python functions to do basic math with lists
+2. listfun.py: Python functions to do basic math with lists
