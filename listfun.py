@@ -42,6 +42,24 @@ def listscal(a,b):
         return c
     else:
         print('One input must be list and another scalar')
+
+def listel(a,ind_list):
+    c=[a[x] for x in ind_list]
+    return c
+
+def listindfind(a,cndn):
+    c=[]
+    for i in range(0,len(a)):
+        if eval('a[i]'+str(cndn)):
+            c.append(i)
+    return c
+
+def listelfind(a,cndn):
+    c=[]
+    for x in a:
+        if eval('x'+str(cndn)):
+            c.append(x)
+    return c
         
 def doc():
     print('''List of functions:
@@ -53,4 +71,7 @@ def doc():
          listdot (a,b):          Returns the scalar or dot product of elements in lists "a" and "b"
          listmean (a):           Returns the arithmetic mean of the elements in list "a" 
          listscal(a,b):          Returns a list of the product of scalar "a" with list "b" if "a" is scalar, or other way around.
+         listel(a,ind_list):     Returns a list of elements in "a" referenced by index list "ind_list"
+         listindfind(a,cndn):    Returns a list of indices in "a" satisfying condition "cndn" entered as string, e.g. cndn='>3'
+         listelfind(a,cndn):     Returns a list of elements in "a" satisfying condition "cndn" entered as string, e.g. cndn='>3'
          ''')
