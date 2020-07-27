@@ -16,8 +16,8 @@ def listelemwisemdiv (a,b):
 
 def listsum (a):
     c=0
-    for x in range(0,len(a)):
-        c=c+a[x]
+    for x in a:
+        c=c+x
     return (c)
 
 def listdot (a,b):
@@ -28,8 +28,8 @@ def listdot (a,b):
 
 def listmean (a):
     c=0
-    for x in range(0,len(a)):
-        c=c+a[x]*b[x]
+    for x in a:
+        c=c+x
     c=c/len(a)
     return c
 
