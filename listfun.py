@@ -27,6 +27,7 @@ def listdot (a,b):
     return c
 
 def listmean (a):
+    c=0
     for x in range(0,len(a)):
         c=c+a[x]*b[x]
     c=c/len(a)
