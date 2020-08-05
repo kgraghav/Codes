@@ -40,6 +40,10 @@ def listmean (a):
     c=c/len(a)
     return c
 
+def listabs(a):
+    c=[-x if x < 0 else x for x in a ]
+    return c
+
 def listscale(a,b):
     if type(a)==list and (type(b)==int or type(b)==float):
         c=[b*x for x in a]
@@ -62,11 +66,9 @@ def listindfind(a,cndn):
     return c
 
 def listelfind(a,cndn):
-    c=[]
-    for x in a:
-        if eval('x'+str(cndn)):
-            c.append(x)
+    c=[x for x in a if eval('x'+str(cndn))]
     return c
+        
         
 def help():
     print('''List of functions:
@@ -78,6 +80,7 @@ def help():
          listsum (a):            Returns the sum of numbers in the list "a"
          listdot (a,b):          Returns the scalar or dot product of elements in lists "a" and "b"
          listmean (a):           Returns the arithmetic mean of the elements in list "a" 
+         listabs (a):            Returns list of absolute values of elements in list "a"
          listscal(a,b):          Returns a list of the product of scalar "a" with list "b" if "a" is scalar, or other way around.
          listel(a,ind_list):     Returns a list of elements in "a" referenced by index list "ind_list"
          listindfind(a,cndn):    Returns a list of indices in "a" satisfying condition "cndn" entered as string, e.g. cndn='>3'
