@@ -2,7 +2,7 @@ def listadd (a,b):
     c=[x+y for x,y in zip(a,b)]
     return (c)
 
-def listsub (a,b):
+def listdiff (a,b):
     c=[x-y for x,y in zip(a,b)]
     return (c)
 
@@ -10,8 +10,15 @@ def listelemwisemult (a,b):
     c=[x*y for x,y in zip(a,b)]
     return (c)
 
-def listelemwisemdiv (a,b):
+def listelemwisediv (a,b):
     c=[x/y for x,y in zip(a,b)]
+    return (c)
+
+def listpow (a,b):
+    if type(a)==list:
+        c=[x**b for x in a]
+    else:
+        c=[x**a for x in b]
     return (c)
 
 def listsum (a):
@@ -33,7 +40,7 @@ def listmean (a):
     c=c/len(a)
     return c
 
-def listscal(a,b):
+def listscale(a,b):
     if type(a)==list and (type(b)==int or type(b)==float):
         c=[b*x for x in a]
         return c
@@ -61,12 +68,13 @@ def listelfind(a,cndn):
             c.append(x)
     return c
         
-def doc():
+def help():
     print('''List of functions:
          listadd (a,b):          Returns list of Elementwise addition of lists "a" and "b"
          listsub (a,b):          Returns list of Elementwise difference of lists "a" and "b"
          listelemwisemult (a,b): Returns list of elementwise products of lists "a" and "b"
-         listelemwisemdiv (a,b): Returns list of elementwise division of lists "a" and "b" as a[...]/b[...]
+         listelemwisediv (a,b):  Returns list of elementwise division of lists "a" and "b" as a[i]/b[i]
+         listpow (a,b):          Returns list of a**b for each element in a, or vice versa 
          listsum (a):            Returns the sum of numbers in the list "a"
          listdot (a,b):          Returns the scalar or dot product of elements in lists "a" and "b"
          listmean (a):           Returns the arithmetic mean of the elements in list "a" 
