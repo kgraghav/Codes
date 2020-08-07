@@ -2,7 +2,9 @@ def solve (exp):
     ### Determine power of expression ###
     if '**' in exp:
         ind=exp.find('**')+2
-    order=int(ind)
+        order=int(exp[ind])
+    else:
+        order=1
     ######################################
     xtol=1/order
     ytol=0.1*order
