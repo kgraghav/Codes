@@ -3,7 +3,8 @@ def solve (exp):
     ind=[0]
     if '**' in exp:
         while '**' in exp[ind[-1]:len(exp)+1] and ind[-1]+2<len(exp)-1:
-            ind.append(exp[ind[-1]:len(exp)+1].find('**')+2)
+            ind.append(exp.find('**',ind[-1],len(exp))+2)
+            print(ind)
         order=0
         for i in ind:
             if i>order:
