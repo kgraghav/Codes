@@ -1,4 +1,5 @@
 def solve (exp):
+    import math as mth
     ### Determine power of expression ###
     ind=[0]
     if '**' in exp:
@@ -50,7 +51,6 @@ def solve (exp):
             if abs_y[k]<min_abs_y:
                 min_abs_y=abs_y[k]
         xtol=xtol/order
-        print(roots)
     roots_temp=roots
     roots=[]
     for r in roots_temp:
@@ -59,4 +59,5 @@ def solve (exp):
         else:
             roots.append(r)
     roots_temp=roots
+    print(roots)
     return roots
