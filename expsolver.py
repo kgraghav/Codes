@@ -1,5 +1,4 @@
 def solve (exp):
-    import math as mth
     ### Determine power of expression ###
     ind=[0]
     if '**' in exp:
