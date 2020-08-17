@@ -58,5 +58,4 @@ def solve (exp):
         else:
             roots.append(r)
     roots_temp=roots
-    print(roots)
     return roots
