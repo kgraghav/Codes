@@ -68,8 +68,14 @@ def listindfind(a,cndn):
 def listelfind(a,cndn):
     c=[x for x in a if eval('x'+str(cndn))]
     return c
+
+def listnum(a,b):
+    c=[]
+    for i in range(0,b):
+        c.append(a)
+    return c
         
-        
+            
 def help():
     print('''List of functions:
          listadd (a,b):          Returns list of Elementwise addition of lists "a" and "b"
@@ -85,4 +91,5 @@ def help():
          listel(a,ind_list):     Returns a list of elements in "a" referenced by index list "ind_list"
          listindfind(a,cndn):    Returns a list of indices in "a" satisfying condition "cndn" entered as string, e.g. cndn='>3'
          listelfind(a,cndn):     Returns a list of elements in "a" satisfying condition "cndn" entered as string, e.g. cndn='>3'
+         listnum(a,b):           Returns a list of number "a" of length "b"
          ''')
